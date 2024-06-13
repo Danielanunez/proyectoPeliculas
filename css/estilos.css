@@ -530,8 +530,40 @@ body{
 }
 #formAdministrador{
     font-style: white;
+    padding: 2% 4.5% 2% 4.5%;
+    
+    .form-label{
+        padding: 0;
+        margin-top: 1%;
+    }
+}
+#hr{
+    color: #9f3647;
+    margin-left: 7%;
+}
+#sectionCrud{
+    padding-left: 5%;
+
+    #table-admi{
+        width: 95%;
+        #th-admi{
+
+            background-color: #212529;
+        }
+        #td-admi{
+            background-color: #2C3034;
+        }
+    }
 }
 
+
+
+/*Media querys administrador*/
+@media (max-width: 120px) {
+    #primerFila-form{
+        flex-direction: column;
+    }
+}
 /*ESTILOS ESCRITORIO PARA PAGINA Registrarse */
 .bodyRegistrarse{
     height: 100vh;

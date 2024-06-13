@@ -28,16 +28,28 @@
 
     <main id="mainAdministrador">
         <form action="Get" id="formAdministrador" class="text-white">
-            <div class="row g-2">
-                <div class="col-auto">
+            <h1 id="titulo-form">Gestión de peliculas</h1>
+            <h5 id="subtitulo-form">En esta sección se podrá llevar a cabo la gestión de las peliculas del portal</h5>
+            <div class="d-flex flex-row" id="primerFila-form">
+                <div class="col pe-1">
                     <label for="formFile" class="form-label">Titulo</label>
                     <input type="text" class="form-control" aria-label="Titulo">
                 </div>
-                <div class="col-auto">
-                    <label for="formFile" class="form-label">Genero</label>
-                      <input type="text" class="form-control" aria-label="Genero">
+                <div class="col px-2">
+                    <label for="inputGroupSelect01" class="form-label">Genero</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                      <option selected>Selecciona...</option>
+                      <option value="familiar">Familiar</option>
+                      <option value="terror">Terror</option>
+                      <option value="aventura">Aventura</option>
+                      <option value="suspenso">Suspenso</option>
+                      <option value="ficcion">Ficcion</option>
+                      <option value="infantil">Infantil</option>
+                    </select>
+                    
+                    <!-- <input type="text" class="form-control" aria-label="Genero"> -->
                 </div>
-                <div class="col-auto">
+                <div class="col ps-1">
                     <label for="formFile" class="form-label">Duración</label>
                       <input type="number" class="form-control" aria-label="Duracion">
                 </div>
@@ -47,11 +59,38 @@
                   <input type="text" class="form-control" aria-label="Director">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <label for="exampleFormControlTextarea1" class="form-label">Sinopsis</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <button type="button" class="btn btn-success">Agregar pelicula</button>
         </form>
+        <hr id="hr">
+
+        <section id="sectionCrud">
+            <h2 id="tituloTabla" class="text-white">Listado de peliculas</h2>
+            <p id="textoTabla" class="text-white">Para ver todos lo datos de las peliculas, elija una y toque modificar</p>
+            <table id="table-admi">
+                <tr id="th-admi" class="text-white">
+                    <th>Titulo</th>
+                    <th>Genero</th>
+                    <th>Duración</th>
+                    <th>Accion</th>
+                </tr>
+                <tr id="td-admi">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Modificar</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Eliminar</button>
+                    </td>
+                </tr>
+
+            </table>
+        </section>
+        
     </main>
 
     <footer class="footer">
